@@ -1,0 +1,52 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Koble til varmepumpe og sensor",
+        "description": "Velg Zigbee-termometeret som romtemperaturreferanse og varmepumpens climate-entitet som skal styres.",
+        "data": {
+          "name": "Navn",
+          "sensor_entity": "Temperatursensor (Zigbee-termometer)",
+          "heat_pump_entity": "Varmepumpe (climate-entitet)",
+          "target_temp": "Komfort-måltemperatur"
+        },
+        "data_description": {
+          "sensor_entity": "Sensoren som brukes som romtemperaturreferanse.",
+          "heat_pump_entity": "Climate-entiteten til varmepumpen som skal styres automatisk.",
+          "target_temp": "Ønsket romtemperatur i komfort-modus."
+        }
+      }
+    },
+    "error": {
+      "same_entity": "Temperatursensor og varmepumpe kan ikke være samme entitet."
+    },
+    "abort": {
+      "already_configured": "Denne varmepumpen er allerede konfigurert."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Juster innstillinger",
+        "description": "Endre parametere for styring av varmepumpen.",
+        "data": {
+          "target_temp": "Komfort-måltemperatur",
+          "hysteresis": "Hysterese / dead band",
+          "min_time_between_changes": "Minimumstid mellom setpunktendringer (min)",
+          "overshoot": "Overshoot ved oppvarming",
+          "eco_offset": "Økonomi-reduksjon under komfortmål",
+          "away_temp": "Borte-temperatur",
+          "boost_temp": "Boost-setpunkt"
+        },
+        "data_description": {
+          "hysteresis": "Setpunktet endres kun når romtemperaturen avviker mer enn dette fra målet. Høyere verdi = færre endringer.",
+          "min_time_between_changes": "Minimum ventetid mellom to setpunktjusteringer. Forhindrer rask veksling.",
+          "overshoot": "Når oppvarming trengs settes varmepumpen til mål + dette, for mer aggressiv oppvarming.",
+          "eco_offset": "Økonomi-modus bruker komfortmål minus denne verdien.",
+          "away_temp": "Fast temperatur i borte-modus.",
+          "boost_temp": "Fast setpunkt for varmepumpen i boost-modus."
+        }
+      }
+    }
+  }
+}

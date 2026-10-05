@@ -1,0 +1,52 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect heat pump and sensor",
+        "description": "Select the Zigbee thermometer as the room temperature reference and the heat pump climate entity to control.",
+        "data": {
+          "name": "Name",
+          "sensor_entity": "Temperature sensor (Zigbee thermometer)",
+          "heat_pump_entity": "Heat pump (climate entity)",
+          "target_temp": "Comfort target temperature"
+        },
+        "data_description": {
+          "sensor_entity": "The sensor used as the room temperature reference.",
+          "heat_pump_entity": "The climate entity of the heat pump to control automatically.",
+          "target_temp": "Desired room temperature in comfort mode."
+        }
+      }
+    },
+    "error": {
+      "same_entity": "Temperature sensor and heat pump cannot be the same entity."
+    },
+    "abort": {
+      "already_configured": "This heat pump is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Adjust settings",
+        "description": "Change parameters for heat pump control.",
+        "data": {
+          "target_temp": "Comfort target temperature",
+          "hysteresis": "Hysteresis / dead band",
+          "min_time_between_changes": "Minimum time between setpoint changes (min)",
+          "overshoot": "Overshoot when heating",
+          "eco_offset": "Economy reduction below comfort target",
+          "away_temp": "Away temperature",
+          "boost_temp": "Boost setpoint"
+        },
+        "data_description": {
+          "hysteresis": "The setpoint only changes when the room temperature deviates more than this from the target. Higher value = fewer changes.",
+          "min_time_between_changes": "Minimum wait time between two setpoint adjustments. Prevents rapid switching.",
+          "overshoot": "When heating is needed, the heat pump is set to target + this value for more aggressive heating.",
+          "eco_offset": "Economy mode uses comfort target minus this value.",
+          "away_temp": "Fixed temperature in away mode.",
+          "boost_temp": "Fixed setpoint for the heat pump in boost mode."
+        }
+      }
+    }
+  }
+}

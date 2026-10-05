@@ -1,0 +1,7 @@
+{
+  "name": "Smart Varmepumpe Styring",
+  "content_in_root": false,
+  "render_readme": false,
+  "homeassistant": "2024.1.0",
+  "filename": "smart_heat_pump.zip"
+}
