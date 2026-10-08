@@ -2,3 +2,5 @@ __pycache__/
 *.py[cod]
 *.pyc
 .DS_Store
+publish_to_github.sh
+push_v1.2.sh
